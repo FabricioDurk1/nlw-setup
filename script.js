@@ -9,13 +9,13 @@ function add() {
     const today = new Date().toLocaleDateString('pt-br').slice(0, -5)
     const dayExists = nlwSetup.dayExists(today)
 
-    if(dayExists){
+    if(dayExists) {
         alert('Dia já incluso 🛑')
         return
     }
 
     alert('Adicionado com sucesso ✅')
-    nlwSetup.addDay('01/01')
+    nlwSetup.addDay(today)
 }
 
 function save() {
